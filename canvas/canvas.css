@@ -1,0 +1,22 @@
+        /* body {
+            background: linear-gradient(90deg, hsl(243, 100%, 7%) 0%, hsl(0, 0%, 0%) 35%, hsl(230, 61%, 20%) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .stage {
+            background-color: hsla(240, 4%, 14%, 0.103);
+            height: 500px;
+            width: 500px;
+            margin-top: 15vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        } */
+
+        .canvas {
+            height: 256px;
+            width: 256px;
+            border: 3px dashed hsl(0, 15%, 92%);
+        }
