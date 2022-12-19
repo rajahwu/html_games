@@ -88,24 +88,36 @@ function canvasApp() {
         // //full circle
         // ctx.stroke();
         // ctx.closePath();
-        // Canvas Composition
-        // draw a big box on the screen
+        //* Canvas Composition
+        // // draw a big box on the screen
+        // ctx.fillStyle = 'black';
+        // ctx.fillRect(10, 10, 200, 200);
+        // // leave globalCompositeOperation as is
+        // //  now draw a red square
+        // ctx.fillStyle = 'red';
+        // ctx.fillRect(1, 1, 50, 50)
+        // // now set the sourc-over
+        // ctx.globalCompositeOperation = 'source-over'
+        // // draw a red square next to the other one
+        // ctx.fillRect(60, 1, 50, 50)   // now set to destination-atop
+        // ctx.globalCompositeOperation = 'destination-atop';
+        // ctx.fillRect(1, 60, 50, 50)
+        // // now set global alpha
+        // ctx.globalAlpha = 0.5;
+        // // now set to source atop
+        // ctx.globalCompositeOperation = 'source-atop'
+        // ctx.fillRect(60, 60, 50, 50);
         ctx.fillStyle = 'black';
-        ctx.fillRect(10, 10, 200, 200);
-        // leave globalCompositeOperation as is
-        //  now draw a red square
+        ctx.fillRect(20, 20, 25, 25);
+        ctx.setTransform(1, 0, 0, 1, 0, 0);
+        var angleInRadians = 45 * Math.PI / 100;
+        var x = 100;
+        var y = 100;
+        var width = 50;
+        var height = 50;
+        ctx.translate(x + 0.5 * width, y + 0.5 * height);
+        ctx.rotate(angleInRadians);
         ctx.fillStyle = 'red';
-        ctx.fillRect(1, 1, 50, 50);
-        // now set the sourc-over
-        ctx.globalCompositeOperation = 'source-over';
-        // draw a red square next to the other one
-        ctx.fillRect(60, 1, 50, 50); // now set to destination-atop
-        ctx.globalCompositeOperation = 'destination-atop';
-        ctx.fillRect(1, 60, 50, 50);
-        // now set global alpha
-        ctx.globalAlpha = 0.5;
-        // now set to source atop
-        ctx.globalCompositeOperation = 'source-atop';
-        ctx.fillRect(60, 60, 50, 50);
+        ctx.fillRect(-0.5 * width, -0.5 * height, width, height);
     }
 }
