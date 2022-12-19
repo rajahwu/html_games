@@ -125,17 +125,29 @@ function canvasApp(): void {
         // ctx.globalCompositeOperation = 'source-atop'
         // ctx.fillRect(60, 60, 50, 50);
 
-        
-        ctx.fillStyle = 'black';
-        ctx.fillRect(20, 20, 25, 25)
-        
+        //* Rotation and Translation Transformations        
+        // ctx.fillStyle = 'black';
+        // ctx.fillRect(20, 20, 25, 25)
+
+        // ctx.setTransform(1, 0, 0, 1, 0, 0);
+        // const angleInRadians = 45 * Math.PI / 100;
+        // let x = 100;
+        // let y = 100;
+        // let width = 50;
+        // let height = 50;
+        // ctx.translate(x+0.5*width, y+0.5*height);
+        // ctx.rotate(angleInRadians);
+        // ctx.fillStyle = 'red';
+        // ctx.fillRect(-0.5*width, -0.5*height, width, height);
+
         ctx.setTransform(1, 0, 0, 1, 0, 0);
-        const angleInRadians = 45 * Math.PI / 100;
+        const angleInRadians = 90 * Math.PI / 180;
         let x = 100;
         let y = 100;
-        let width = 50;
+        let width = 100;
         let height = 50;
         ctx.translate(x+0.5*width, y+0.5*height);
+        ctx.scale(2, 2);
         ctx.rotate(angleInRadians);
         ctx.fillStyle = 'red';
         ctx.fillRect(-0.5*width, -0.5*height, width, height);
