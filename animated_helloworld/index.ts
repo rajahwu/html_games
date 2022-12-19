@@ -22,13 +22,13 @@ function canvasApp(): void {
     const canvasOne = <HTMLCanvasElement>document.getElementById('canvas_one');
     const ctx = <CanvasRenderingContext2D>canvasOne.getContext('2d');
     if (!ctx) return;
-    
+
     const text = "Hello World";
     const helloWordlImage = new Image();
     helloWordlImage.src = './helloworld.jpg';
     let alpha = 0;
     let fadeIn = true;
-    gameLoop()
+    gameLoop();
 
 
     function gameLoop(): void {
