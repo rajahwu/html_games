@@ -1,9 +1,18 @@
 window.onload = canvasApp;
-
+/**
+ * Check browser support for canvas
+ * 
+ * @returns boolean
+ */
 function canvasSupport(): boolean {
     return !!document.createElement('canvas').getContext;
 }
 
+/**
+ * runs canvas app
+ * 
+ * @returns void
+ */
 function canvasApp(): void {
     if (!canvasSupport) return;
     const canvasOne = <HTMLCanvasElement>document.getElementById('canvas_one');
@@ -11,6 +20,10 @@ function canvasApp(): void {
     if (!ctx) return;
     drawScreen();
 
+
+    /**
+     *  Draw on canvas
+     */
     function drawScreen(): void {
         // background
         ctx.fillStyle = '#ffffaa';
