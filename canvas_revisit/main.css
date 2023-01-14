@@ -1,0 +1,11 @@
+*,*::before,*after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.app { 
+    width: 500px;
+    height: 500px;
+    margin-top: 15vh;
+    margin-left: 25vw;
+}
